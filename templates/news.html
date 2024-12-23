@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #CCCCCC;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Новости</h1>
+
+<table>
+    <tr>
+	<th>Номер</th>
+        <th>День</th>
+        <th>Месяц</th>
+        <th>Новость</th>
+        <th>ссылка</th>
+    </tr>
+    {% for row in gifts %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+	<td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
